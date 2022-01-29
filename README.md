@@ -1,4 +1,4 @@
-                                                KHỞI TẠO LOCAL REPO- VÀ PUSH + TRACK REMOTE ON GITHUB CMD
+KHỞI TẠO LOCAL REPO- VÀ PUSH + TRACK REMOTE ON GITHUB CMD
 																								
 1. ĐI ĐẾN THƯ MỤC PROJECT (CHANGE DIRECTORY)
 	cd {path}
