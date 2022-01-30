@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package javaapplication14;
 
-/**
- *
- * @author Administrator
- */
-public class JavaApplication14 {
+import java.sql.*;
 
-    /**
-     * @param args the command line arguments
-     */
+public class JavaApplication14 { // tên class tự sửa cho giống tên file
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            String dbURL = "jdbc:sqlserver://DESKTOP-0AUMMF4\\SQLEXPRESS:1433;databaseName=lmao;Username=sa;Password = 12345";
+            Connection conn = DriverManager.getConnection(dbURL);
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT * FROM a1";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                System.out.println("col1: " + rs.getFloat("col1"));
+                System.out.println("col2: " + rs.getInt("col2"));
+                System.out.println("col3: " + rs.getString("col3"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
     }
-    
 }
